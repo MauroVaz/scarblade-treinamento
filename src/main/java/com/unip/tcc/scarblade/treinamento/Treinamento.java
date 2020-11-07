@@ -27,13 +27,13 @@ import com.unip.tcc.scarblade.utils.DecoderUtils;
  * @author Jones
  */
 public class Treinamento {
-    public static void main(String args[]) {
+	
+    public void treinamentoFlux(String id) {
     	
     	FacesDAO dao = new FacesDAO(); 	
-    	String id = "24";
     	List<String> a = dao.selectFaces(id);  	
     	DecoderUtils imagemDC = new DecoderUtils();
-    	imagemDC.decoder(a);
+    	imagemDC.decoder(a,id);
     	
     	
     	 File diretorio = new File("D:\\DEV\\Projetos\\scarblade-treinamento\\fotos\\");

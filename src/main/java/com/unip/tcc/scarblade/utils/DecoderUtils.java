@@ -10,7 +10,7 @@ public class DecoderUtils {
 	
 	public void decoder(List<String> a,String id) {
 		FileImageOutputStream imageOutput;
-		String path = "D:\\DEV\\Projetos\\scarblade-treinamento\\fotos\\";
+		String path = "/opt/tcc/fotos/";
 		try {
 			for (int i = 0; i <= 14; i++) {
 				byte[] data = Base64.getDecoder().decode(a.get(i));

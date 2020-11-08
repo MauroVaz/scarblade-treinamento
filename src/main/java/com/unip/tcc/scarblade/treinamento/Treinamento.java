@@ -24,7 +24,7 @@ import com.unip.tcc.scarblade.utils.DecoderUtils;
 
 /**
  *
- * @author Jones
+ * @author Mauro
  */
 public class Treinamento {
 	
@@ -36,7 +36,7 @@ public class Treinamento {
     	imagemDC.decoder(a,id);
     	
     	
-    	 File diretorio = new File("D:\\DEV\\Projetos\\scarblade-treinamento\\fotos\\");
+    	 File diretorio = new File("/opt/tcc/fotos");
     	 FilenameFilter filtroImagem = new FilenameFilter() {
              @Override
              public boolean accept(File dir, String nome) {
@@ -64,11 +64,11 @@ public class Treinamento {
          FaceRecognizer lbph = LBPHFaceRecognizer.create(2,9,9,9,1);
          
          eigenfaces.train(fotos, rotulos);
-         eigenfaces.save("D:\\DEV\\Projetos\\scarblade-treinamento\\src\\recursos\\classificadorEigenFaces.yml");
+         eigenfaces.save("/opt/tcc/recursos/classificadorEigenFaces.yml");
          fisherfaces.train(fotos, rotulos);
-         fisherfaces.save("D:\\DEV\\Projetos\\scarblade-treinamento\\src\\recursos\\classificadorFisherFaces.yml");
+         fisherfaces.save("/opt/tcc/recursos/classificadorFisherFaces.yml");
          lbph.train(fotos, rotulos);
-         lbph.save("D:\\DEV\\Projetos\\scarblade-treinamento\\src\\recursos\\classificadorLBPH.yml");
+         lbph.save("/opt/tcc/recursos/classificadorLBPH.yml");
      }
     
 }
